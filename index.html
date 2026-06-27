@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BLUESHIN</title>   
+<title>BLUESHIN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 *{
   margin:0;
-  padding:0; 
+  padding:0;
   box-sizing:border-box;
   font-family:'Playfair Display', serif;
 }
@@ -17,22 +20,55 @@ body{
   color:#333;
 }
 
+/* HEADER */
 header{
   background:#a2cffe;
-  color:#333;
   text-align:center;
   padding:20px;
 }
 
 header h1{
-  font-size:21px;
+  font-size:22px;
+  letter-spacing:2px;
 }
 
-header p{
-  margin-top:8px;
-  color:#555;
+/* MENU */
+nav{
+  margin-top:10px;
 }
 
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#000;
+}
+
+/* IMAGENES */
+.hero{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:20px;
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.hero div{
+  text-align:center;
+}
+
+.hero img{
+  width:180px;
+  border-radius:10px;
+}
+
+/* PRODUCTOS */
 .productos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -53,14 +89,16 @@ header p{
   object-fit:cover;
 }
 
-.producto h2{
+.producto p{
   padding:10px;
 }
 
-.producto p{
-  padding:0 10px 15px;
+.producto strong{
+  padding:0 10px;
+  display:block;
 }
 
+/* BOTON */
 .boton{
   display:block;
   margin:15px;
@@ -73,42 +111,18 @@ header p{
   font-weight:bold;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
   padding:20px;
   background:#111;
   color:white;
 }
-  nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:#333;
-  font-weight:bold;
-  font-size:14px;
-}
-
-nav a:hover{
-  color:#000;
-    }
-  nav{
-  margin-top:10px;
-}
-
-nav a{
-  margin:0 12px;
-  text-decoration:none;
-  color:#333;
-  font-weight:bold;
-  font-size:14px;
-}
-
-nav a:hover{
-  color:#000;
-}
 </style>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 <header>
   <h1>BLUESHIN</h1>
 
@@ -117,30 +131,35 @@ nav a:hover{
     <a href="#">Catálogo</a>
     <a href="#">Nosotros</a>
     <a href="#">Contacto</a>
-    </nav>
+  </nav>
 </header>
 
-<section style="display:flex; justify-content:center; gap:15px; padding:20px; text-align:center;">
-  
-  <img src="joyeria.jpg" style="width:180px; border-radius:10px;" alt="Joyería BLUESHIN">
+<section class="hero">
 
-  <img src="packaging.jpg" style="width:180px; border-radius:10px;" alt="Packaging BLUESHIN">
+  <div>
+    <img src="joyeria.jpg" alt="Joyería BLUESHIN">
+    <p>Joyería BLUESHIN</p>
+  </div>
+
+  <div>
+    <img src="packaging.jpg" alt="Packaging BLUESHIN">
+    <p>Packaging BLUESHIN</p>
+  </div>
 
 </section>
 
 <section class="productos">
 
-<div class="producto">
-  <img src="https://via.placeholder.com/280" alt="Anillo BLUESHIN">
+  <div class="producto">
+    <img src="https://via.placeholder.com/280" alt="Anillo BLUESHIN">
 
-  <div style="padding:10px;">
-  
-    <p style="margin:8px 0;">Diseño elegante y resistente al agua</p>
+    <p>Diseño elegante y resistente al agua</p>
     <strong>85 Bs</strong>
-  </div>
 
-  <a href="https://wa.me/59170000000?text=Hola,%20quiero%20comprar%20este%20producto" class="boton">Consultar por WhatsApp</a>
-</div>
+    <a href="https://wa.me/59170000000?text=Hola,%20quiero%20comprar%20este%20producto" class="boton">
+      Consultar por WhatsApp
+    </a>
+  </div>
 
 </section>
 
